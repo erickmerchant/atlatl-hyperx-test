@@ -1,9 +1,15 @@
 var Template = require('./template.html.js')
 var main = require('main-loop')
-var bean = require('bean')
 var content = {
   times: 0,
-  collection: []
+  collection: [],
+  increment: function () {
+    content.times += 1
+
+    content.collection.push(Math.random())
+
+    loop.update(content)
+  }
 }
 var loop = main(content, render, {
   document: document,
@@ -11,17 +17,8 @@ var loop = main(content, render, {
   diff: require('virtual-dom/diff'),
   patch: require('virtual-dom/patch')
 })
-var $main = document.querySelector('main')
 
-$main.appendChild(loop.target)
-
-bean.on($main, 'click', 'button', function () {
-  content.times += 1
-
-  content.collection.push(Math.random())
-
-  loop.update(content)
-})
+document.querySelector('main').appendChild(loop.target)
 
 function render (content) {
   return (new Template()).render(content)

@@ -1,2 +1,2 @@
 # atlatl-hyperx-test
-hyperx + atlatl + virtual-dom + main-loop + bean +  browserify
+hyperx + atlatl + virtual-dom + main-loop + browserify
