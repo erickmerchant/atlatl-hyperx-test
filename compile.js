@@ -1,7 +1,6 @@
 var atlatl = require('atlatl')
 var templates = atlatl({
-  cacheDirectory: './',
-  runtimePath: './runtime.js'
+  cacheDirectory: './'
 })
 
 templates('./template.html')

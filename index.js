@@ -1,4 +1,5 @@
-var Template = require('./template.html.js')
+var runtime = require('./runtime.js')
+var Template = require('./template.html.js')(runtime)
 var main = require('main-loop')
 var content = {
   times: 0,

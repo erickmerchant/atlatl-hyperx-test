@@ -1,7 +1,7 @@
 var vdom = require('virtual-dom')
 var hyperx = require('hyperx')
 var hx = hyperx(vdom.h)
-var runtime = require('atlatl/code/runtime.js')
+var runtime = require('atlatl/runtime')
 
 function template (strings) {
   var args = new Array(arguments.length)
