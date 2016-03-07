@@ -1,5 +1,5 @@
 <div>
-  <button onclick=${content.increment}>click me!</button>
+  <button onclick=${safe(content.increment)}>click me!</button>
   <h1>clicked ${content.times} times</h1>
   <ul>
     @each content.collection (item)

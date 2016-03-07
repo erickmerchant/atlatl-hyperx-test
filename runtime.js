@@ -8,10 +8,6 @@ function template (strings) {
   var i, j
 
   for (i = 1, j = 0; i < args.length; ++i, ++j) {
-    if (typeof arguments[i] === 'function') {
-      arguments[i] = runtime.safe(arguments[i])
-    }
-
     args[j] = arguments[i]
   }
 
