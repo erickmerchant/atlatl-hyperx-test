@@ -1,8 +1,8 @@
 <div>
-  <button onclick=${safe(content.increment)}>click me!</button>
-  <h1>clicked ${content.times} times</h1>
+  <button onclick=${app.increment}>click me!</button>
+  <h1>clicked ${state.times} times</h1>
   <ul>
-    @each content.collection (item)
+    @each state.collection (item)
       <li>${item}</li>
     @
   </ul>

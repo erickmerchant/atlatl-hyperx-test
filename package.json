@@ -17,7 +17,7 @@
   "dependencies": {},
   "scripts": {
     "test": "standard",
-    "compile": "atlatl template.html --cache-directory ./",
+    "compile": "atlatl template.html --cache-directory ./ --variable 'state, app'",
     "bundle": "browserify -t [ babelify --presets [ es2015 ] ] index.js > bundle.js",
     "minify": "uglifyjs bundle.js --compress --mangle --output bundle.js",
     "build": "npm run compile && npm run bundle && npm run minify"

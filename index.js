@@ -1,18 +1,20 @@
 var runtime = require('./runtime.js')
 var Template = require('./template.html.js')(runtime)
 var main = require('main-loop')
-var content = {
+var state = {
   times: 0,
-  collection: [],
+  collection: []
+}
+var app = {
   increment: function () {
-    content.times += 1
+    state.times += 1
 
-    content.collection.push(Math.random())
+    state.collection.push(Math.random())
 
-    loop.update(content)
+    loop.update(state)
   }
 }
-var loop = main(content, render, {
+var loop = main(state, render, {
   document: document,
   create: require('virtual-dom/create-element'),
   diff: require('virtual-dom/diff'),
@@ -21,6 +23,6 @@ var loop = main(content, render, {
 
 document.querySelector('main').appendChild(loop.target)
 
-function render (content) {
-  return (new Template()).render(content)
+function render (state) {
+  return (new Template()).render(state, app)
 }
