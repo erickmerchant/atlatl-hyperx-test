@@ -8,7 +8,7 @@
     "atlatl": "^5.0.0",
     "babel-preset-es2015": "^6.5.0",
     "babelify": "^7.2.0",
-    "browserify": "^13.0.0",
+    "browserify": "^14.0.0",
     "hyperx": "^2.0.2",
     "main-loop": "^3.2.0",
     "uglify-js": "^2.6.2",
